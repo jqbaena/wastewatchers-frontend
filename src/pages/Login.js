@@ -8,6 +8,7 @@ class Login extends Component {
   state = {
     username: "",
     password: "",
+    message: ""
   }
 
   handleFormSubmit = (event) => {
@@ -18,7 +19,12 @@ class Login extends Component {
     .then( (user) => {
       this.props.setUser(user);
     })
-    .catch( error => console.log(error) )
+    .catch( error => {
+      this.setState({
+        message: "Empty fields",
+
+      })
+    })
   }
 
   handleChange = (event) => {  
@@ -37,7 +43,7 @@ class Login extends Component {
           <input type="password" name="password" value={password} onChange={this.handleChange} />
           <input className="button-login" type="submit" value="Login" />
         </form>
-
+        <p>{this.state.message}</p>
         <p>Don't you have an account? 
           <Link to={"/signup"}> Signup</Link>
         </p>

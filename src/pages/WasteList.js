@@ -27,9 +27,6 @@ class WasteList extends Component {
       })
   }
 
-  componentWillUnmount() {
-    console.log("componentWillUnmount")
-  }
 
   handleAddWaste = (id, amount) =>{
     const newHistory = {
@@ -39,7 +36,6 @@ class WasteList extends Component {
     };
     WasteService.AddWaste(newHistory)
     .then((response) => {
-      console.log(response);
     })
     .catch((error) => {
     })

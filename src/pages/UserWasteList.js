@@ -16,7 +16,6 @@ class UserWasteList extends Component {
   componentDidMount () {
     WasteService.getUserWaste()
       .then((wastesHistory) => {
-        console.log('wastes', wastesHistory.wastes)
         this.setState({
           wastesHistory: wastesHistory.wastes,
           isLoading: false
@@ -29,9 +28,6 @@ class UserWasteList extends Component {
       })
   }
 
-  componentWillUnmount() {
-    console.log("componentWillUnmount")
-  }
 
   render() {
     if (this.state.isLoading) {

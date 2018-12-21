@@ -5,8 +5,8 @@ class Private extends Component {
     
     return (
       <div>
-        <div class="home">
-          <img class="homeimg" src="https://free3d.com/imgd/l12/5afef15d26be8bf2748b4567/3003-low-poly-trees.png" alt="tree"/>
+        <div className="home">
+          <img className="homeimg" src="https://free3d.com/imgd/l12/5afef15d26be8bf2748b4567/3003-low-poly-trees.png" alt="tree"/>
         </div>
       </div>
     )

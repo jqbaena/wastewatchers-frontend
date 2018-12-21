@@ -8,6 +8,7 @@ class Signup extends Component {
   state = {
     username: "",
     password: "",
+    message: ""
   };
 
   handleFormSubmit = (event) => {
@@ -23,7 +24,12 @@ class Signup extends Component {
         });
         this.props.setUser(user)
       })
-      .catch( error => console.log(error) )
+      .catch( error => {
+        this.setState({
+          message: "Empty fields",
+  
+        })
+      })
   }
 
   handleChange = (event) => {  
@@ -43,6 +49,7 @@ class Signup extends Component {
           <input type="submit" value="Signup" />
         </form>
 
+        <p>{this.state.message}</p>
         <p>Already have account? 
           <Link to={"/login"}> Login</Link>
         </p>
