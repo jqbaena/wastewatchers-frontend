@@ -4,7 +4,10 @@ import '../css/style.css';
 
 class Navbar extends Component {
 
+ 
+
   renderIsLoggedIn = () => {
+    console.log(this.props);
     return <div >
       <div className='container'>
         <div className='navbar'>
@@ -19,6 +22,7 @@ class Navbar extends Component {
   }
  
   renderIsNotLoggedIn = () => {
+    console.log(this.props);
     return <div>
     </div>
   }
