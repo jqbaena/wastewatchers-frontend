@@ -1,5 +1,6 @@
 # Watch Waste
-App with the purpose of helping you to be conscious about the amount of waste you are generating in a period of time. User can log the waste is generating every day and watch the waste generated.
+## Description
+This project is meant to be the front-end of and app made with react. The purpose of this application is helping you to be conscious about the amount of waste you are generating in a period of time. User can log the waste is generating every day and watch the waste generated.
 
 ## User Stories
 
